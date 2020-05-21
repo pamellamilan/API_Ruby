@@ -1,7 +1,6 @@
 # HTTParty | Cucumber
 
-Repositório da Postagem do Medium sobre HTTParty
-Link postagem: [Automação de Testes com HTTParty e Cucumber](https://medium.com/@rafaelberam/automa%C3%A7%C3%A3o-de-testes-api-com-httparty-e-cucumber-bdd-d955749affa8)
+Automação de uma consulta via CEP no sistema IBGE
 
 ## Bundler
 Instale o Bundler:
