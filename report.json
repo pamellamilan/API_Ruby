@@ -1,0 +1,161 @@
+[
+  {
+    "uri": "features/specification/api_consultar_cep.feature",
+    "id": "consulta-de-endereço-por-cep-através-de-api-rest",
+    "keyword": "Funcionalidade",
+    "name": "Consulta de endereço por cep através de API Rest",
+    "description": "Como um usuário que necessita de endereço\nQuero consultar CEP através de serviço de API Rest\nPara obter o código do IBGE referente ao CEP consultado",
+    "line": 3,
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 8,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "o serviço viacep de consulta de CEPs",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 864011200
+            }
+          }
+        ]
+      },
+      {
+        "id": "consulta-de-endereço-por-cep-através-de-api-rest;consulta-de-endereço-via-cep",
+        "keyword": "Cenário",
+        "name": "Consulta de endereço via CEP",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cep_valido",
+            "line": 11
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "enviar a requisição informando CEP \"01001000\"",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 812278100
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "deve ser retornado o status code 200",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13935400
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o response com ibge esperado deve ser \"3550308\"",
+            "line": 15,
+            "output": [
+              "IBGE: 3550308"
+            ],
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 382000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 8,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "o serviço viacep de consulta de CEPs",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 823198700
+            }
+          }
+        ]
+      },
+      {
+        "id": "consulta-de-endereço-por-cep-através-de-api-rest;consulta-de-endereço-via-cep-invalido",
+        "keyword": "Cenário",
+        "name": "Consulta de endereço via CEP Invalido",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@cep_invalido",
+            "line": 17
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "enviar a requisição informando CEP \"01001041\"",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 806023000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "deve ser retornado o status code 200",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149700
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o response deve retornar elemento ERRO igual a true",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/api_consultar_cep_steps.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 266400
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
